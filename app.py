@@ -6,6 +6,7 @@ st.title("FitLife: a'zolar ketishini oldindan aniqlash")
 st.caption("O'quv keysi. Dataset: Kaggle gym churn, 800 a'zolik test namunasi. Foyda hisobi tahminiy.")
 
 df = pd.read_csv('test_predictions.csv')
+df = df.rename(columns={'kredit': 'ketdi', "Churn": 'ketdi'})
 
 st.sidebar.header("Sozlamalar")
 K = st.sidebar.slider("Ro'yxat uzunligi (kishi)", 40, 300, 160, 10)
